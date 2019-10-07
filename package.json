@@ -1,0 +1,16 @@
+{
+  "name": "rebelMouseTest",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "repository": "https://github.com/tiuscia/rebelMouseTest.git",
+  "author": "katiazanotti <tiuscia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  }
+}
