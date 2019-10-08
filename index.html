@@ -4,6 +4,16 @@
     <script src="https://kit.fontawesome.com/acc23d9dc5.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/allStyle.css">
+    <!--[if IE]>
+          <style type="text/css">
+    
+            .sample {
+              filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='sample_600x600.png', sizingMethod='scale');
+              background:none !important;
+            }
+    
+            </style>
+        <![endif]-->
 </head>
 
 <body>
@@ -76,19 +86,19 @@
         </div>
         <div class="main-content__wrapper">
             <div class="main-content__slideshow">
-                <div class="main-content__slideshow-wrapper">
+                <div class="main-content__slideshow-wrapper clickable" aria-gallery="0" role="img" alt="disney one">
                     <div class="main-content__thumbnails">
                         <div class="main-content__single-thumbnail">
-                            <img src="img/disney-2.jpg" alt="">
+                            <img src="img/disney-2.jpg" class="clickable" aria-gallery="1" alt="disney two">
                         </div>
                         <div class="main-content__single-thumbnail">
-                            <img src="img/disney-3.jpg" alt="">
+                            <img src="img/disney-3.jpg" class="clickable" aria-gallery="2" alt="disney three">
                         </div>
                         <div class="main-content__single-thumbnail">
-                            <img src="img/disney-4.jpg" alt="">
+                            <img src="img/disney-4.jpg" class="clickable" aria-gallery="3" alt="disney four">
                         </div>
                         <div class="main-content__single-thumbnail main-content__single-thumbnail--total">
-                            <img src="img/disney-5.jpg" alt="">
+                            <img src="img/disney-5.jpg" class="clickable" aria-gallery="4" alt="disney five">
                             <span>+95</span>
                         </div>
                     </div>
@@ -187,8 +197,21 @@
             </div>
         </div>
     </div>
+    <div class="gallery">
+        <div class="gallery__wrapper">
+            <div class="gallery__arrow gallery__arrow--left"><i class="fas fa-chevron-left"></i></div>
+            <div class="gallery__arrow gallery__arrow--right"><i class="fas fa-chevron-right"></i></div>
+            <div class="gallery__close" onclick="closeGallery()"><i class="fas fa-times-circle"></i></div>
+            <div class="gallery__img-container">
+                <!-- <img src="img/disney-6.jpg" alt="disney vacation"> -->
+                <div class="gallery__img-counter">
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>

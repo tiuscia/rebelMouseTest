@@ -143,7 +143,7 @@ body {
 
 .header {
   background-color: #133a7c;
-  padding-bottom: 10px; }
+  padding: 0 20px 10px 20px; }
   .header__wrapper {
     max-width: 1200px;
     width: 100%;
@@ -295,17 +295,27 @@ body {
     width: 100%;
     display: flex;
     background-color: #fff; }
+    @media screen and (max-width: 768px) {
+      .main-content__wrapper {
+        flex-direction: column; } }
   .main-content__slideshow, .main-content__info {
     width: 50%; }
+    @media screen and (max-width: 768px) {
+      .main-content__slideshow, .main-content__info {
+        width: 100%; } }
   .main-content__info {
     padding: 20px;
     max-width: 650px;
     padding: 40px 30px 15px 40px; }
+    @media screen and (max-width: 768px) {
+      .main-content__info {
+        max-width: 100%; } }
   .main-content__header {
     display: flex; }
   .main-content__details {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    max-width: calc(100% - 100px); }
   .main-content__country, .main-content__sub-title {
     font-size: 14px;
     font-weight: 300;
@@ -377,6 +387,10 @@ body {
     .main-content__date-container img {
       width: 40px;
       margin: 0 8px; }
+    @media screen and (max-width: 1240px) {
+      .main-content__date-container {
+        width: 100%;
+        margin-bottom: 15px; } }
   .main-content__date-header {
     display: flex;
     flex-direction: column;
@@ -395,6 +409,9 @@ body {
     display: flex; }
   .main-content__date-price {
     margin-bottom: 40px; }
+    @media screen and (max-width: 1240px) {
+      .main-content__date-price {
+        flex-direction: column; } }
   .main-content__single-date-month {
     flex-direction: column;
     font-weight: 300;
@@ -460,6 +477,9 @@ body {
     transition: all 0.3s ease; }
     .main-content__select-btn:hover {
       background-color: #ea4593; }
+    @media screen and (max-width: 1240px) {
+      .main-content__select-btn {
+        width: 100%; } }
   .main-content__slideshow-wrapper {
     height: 650px;
     background-image: url(../img/disney-1.jpg);
@@ -490,7 +510,8 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       font-weight: 300;
-      font-size: 24px; }
+      font-size: 24px;
+      pointer-events: none; }
     .main-content__single-thumbnail:hover {
       border-color: #FF6D00; }
     .main-content__single-thumbnail img {
@@ -506,3 +527,61 @@ body {
         transition: all 0.2s ease; }
         .main-content__single-thumbnail--total img:hover {
           opacity: .1; }
+
+.gallery {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  .gallery--show {
+    display: block; }
+  .gallery__wrapper, .gallery__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .gallery__wrapper {
+    height: 100%;
+    width: 100%; }
+  .gallery__close, .gallery__arrow {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    z-index: 999; }
+  .gallery__arrow {
+    height: 100%;
+    width: 50px; }
+    .gallery__arrow--right {
+      right: 0;
+      justify-content: flex-start; }
+    .gallery__arrow--left {
+      left: 0;
+      justify-content: flex-end; }
+    .gallery__arrow:hover {
+      cursor: pointer; }
+  .gallery__close {
+    right: 20px;
+    top: 20px; }
+    .gallery__close:hover {
+      cursor: pointer; }
+  .gallery__img-container {
+    width: 768px;
+    max-width: 100vw;
+    min-height: 90vh;
+    overflow: hidden;
+    margin: auto;
+    background-image: url(../img/disney-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; }
+  .gallery__img-counter {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    color: #fff;
+    letter-spacing: 2px; }
