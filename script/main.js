@@ -29,18 +29,14 @@ function setCurrentImg(init) {
     }
 
     currentShown = init;
-    // $('.gallery__img-counter').text(`${currentShown}/${imgPaths.length}`);
     $('.gallery__img-counter').html((currentShown + 1) + "/" + imgPaths.length);
     $('.gallery__img-container').css('background-image', `url(${root}${imgPaths[init]})`);
 }
 
 $(".gallery__arrow").click(function (e) {
-
     if ($(this).hasClass("gallery__arrow--left")) {
-        //left
         setCurrentImg(currentShown - 1);
     } else {
         setCurrentImg(currentShown + 1);
     }
-
 });
